@@ -42,7 +42,7 @@ pipeline {
         label 'CentOS'
       }
       steps {
-        sh "wget ip-172-31-44-58.eu-north-1.compute.internal//rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
+        sh "wget http://ec2-16-171-250-230.eu-north-1.compute.amazonaws.com//rectangles/all/${env.BRANCH_NAME}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
         sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 3 4"
       }
     }
